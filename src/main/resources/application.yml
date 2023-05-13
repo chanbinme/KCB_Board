@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    drvier-class-name: org.h2.Driver
+    url: jdbc:h2:mem:db
+    username: sa
+    password:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+    defer-datasource-initialization: true
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      path: /h2-board
+      enabled: true
+  elasticsearch:
+    host: 127.0.0.1
+    port: 9200
